@@ -1,1 +1,1 @@
-project='C://Users//hisham//Desktop//t
+project='C:/Users/moham/OneDrive/سطح المكتب/test/signlanguagetest'

@@ -7,7 +7,7 @@ from moviepy.editor import VideoFileClip
 app = Flask(__name__)
 
 # Set the working directory
-os.chdir(r"C:\Users\moham\OneDrive\سطح المكتب\test")
+os.chdir(r"C:\Users\moham\OneDrive\سطح المكتب\test\signlanguagetest")
 
 try:
     # Initialize the YOLO model
@@ -78,7 +78,7 @@ def process_video():
                     vid_stride=length,
                     show=True,
                     save_crop=True,
-                    project='C:/Users/moham/OneDrive/سطح المكتب/test',
+                    project='C:/Users/moham/OneDrive/سطح المكتب/test/signlanguagetest',
                     name='done'
                 )
 
@@ -93,7 +93,7 @@ def process_video():
                 list_of_labels = []
 
                 # Ensure the directory exists before accessing its contents
-                done_crops_path = 'C:/Users/moham/OneDrive/سطح المكتب/test/done/crops'
+                done_crops_path = 'C:/Users/moham/OneDrive/سطح المكتب/test/signlanguagetest/done/crops'
                 if os.path.exists(done_crops_path):
                     for folder in os.listdir(done_crops_path):
                         list_of_labels.append(folder)
@@ -102,7 +102,7 @@ def process_video():
                 last_output = [get_label(label) for label in list_of_labels]
 
                 # Remove the 'done' folder if it exists
-                done_folder_path = os.path.join('C:/Users/moham/OneDrive/سطح المكتب/test', 'done')
+                done_folder_path = os.path.join('C:/Users/moham/OneDrive/سطح المكتب/test/signlanguagetest', 'done')
                 if os.path.exists(done_folder_path):
                     shutil.rmtree(done_folder_path)
                 if last_output:
@@ -115,4 +115,4 @@ def process_video():
 
 # Run the Flask application
 if __name__ == '__main__':
-    app.run(debug=True, port=5000)
+    app.run(debug=True)
