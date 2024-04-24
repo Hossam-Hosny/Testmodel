@@ -2,3 +2,4 @@ arabic_reshaper==3.0.0
 Flask==3.0.3
 moviepy==1.0.3
 ultralytics==8.1.45
+gunicorn 
