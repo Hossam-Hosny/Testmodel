@@ -1,5 +1,9 @@
-gunicorn
+
 arabic_reshaper==3.0.0
 Flask==3.0.3
 moviepy==1.0.3
 ultralytics==8.1.45
+gunicorn
+Jinja2==2.11.3
+Werkzeug===1.0.1
+MarkupSafe==1.1.1
