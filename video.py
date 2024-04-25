@@ -115,8 +115,5 @@ def process_video():
 
 # Run the Flask application
 if __name__ == '__main__':
-<<<<<<< HEAD
-    app.run(debug=True)
-=======
-    app.run(debug=True)
->>>>>>> 2846c9e8ed75e0c13b563a198fe745f872753e54
+     app.run(debug=True)
+
